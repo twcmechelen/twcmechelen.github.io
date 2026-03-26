@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .h3 {
+      font-family: 'Gill Sans', sans-serif;
+      padding: 10px;
+    }
+
+    img {
+      float: left;
+      margin-left: 20px;
+      width: 55%;
+      border-radius: 5px;
+      border: 2px solid white;
+      padding: 5px;
+    }
+
+    .p {
+      font-family: 'Gill Sans', sans-serif;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    form {
+      font-family: 'Gill Sans', sans-serif;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    /* Animatiecodes */
+    @keyframes beweging {
+      0% {
+        left: 0px;
+      }
+
+      100% {
+        left: 660px;
+        background-color: #e7f1ff;
+      }
+    }
+
+    #discobal {
+      width: 400px;
+      height: 110px;
+      padding: 10px;
+      border-radius: 5px;
+      background: limegreen;
+      position: relative;
+      animation-name: beweging;
+      animation-duration: 10s;
+      animation-iteration-count: 1;
+      animation-delay: 5s;
+      animation-fill-mode: forwards;
+      box-sizing: border-box;
+      box-shadow: inset 2px 2px 5px limegreen;
+    }
+
+    input[type="text"],
+    textarea,
+    select,
+    button {
+      border-radius: 4px;
+      box-sizing: border-box;
+      box-shadow: inset 2px 2px 5px limegreen;
+    }
+
+    textarea {
+      width: 400px;
+      background-color: #e7f1ff;
+      padding: 5px 4px;
+    }
+
+    button:active {
+      background-color: limegreen;
+      color: white;
+      border-radius: 4px;
+      box-shadow: inset 2px 2px 5px blue;
+    }
+
+    footer {
+      background-color: limegreen;
+      height: 100px;
+      padding: 10px;
+    }
+  </style>
+  <title>TWC Mechelen</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-info bg-light">
+    <div class="container-fluid" style="background-color:limegreen">
+      <a class="navbar-brand" href="#">TWC Mechelen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historie.html">Historie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fotogalerij.html">Fotogalerij</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="actueel.html">Actueel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sponsors.html">Sponsors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <img src="Logo TWC 2017.jpg" alt="logo" style="width: 10%;">
+      </div>
+    </div>
+  </nav>
+  <h4 class="h4"><b>Bestuur</b></h4>
+  <p class="p">Voorzitter: Jo Prumpeler GSM-nr: <a href="tel:+31610954031">06-10954031</a><br>
+    Secrtetaris: Walter Loozen GSM-nr: <a href="tel:+31624151858">06-24151858</a><br>
+    Penningmeester: Alexander Possen GSM-Nr: <a href="tel:+31610976506">06-10976506</a><br>
+    Bestuurslid: Noël van der Leij GSM-nr: <a href="tel:+31653695966">06-53695966</a><br>
+    Bestuurslid: Ron Willems GSM-nr: <a href="tel:+316218655854">06-21865854</p>
+  <div id="discobal">
+    <p>Meer informatie?<br>Vragen?<br>Gastrijder?<br>Neem dan telefonisch of via een bericht, contact op.</p>
+  </div>
+  <h3 class="h3"><b>Contactformulier</b></h3>
+  <form id="contactform" action="https://formspree.io/f/xdovnrbo" method="POST">
+    <label>
+      Uw naam:
+      <input type="naam" name="naam">
+    </label>
+    <label>
+      Uw emailadres:
+      <input type="email" name="email">
+    </label>
+    <input type="hidden" name="_subject" value="Website contact" />
+    <label>
+      Uw bericht:
+      <textarea name="bericht"></textarea>
+    </label>
+    <input type="text" name="_gotcha" style="display:none" />
+    <button type="submit">Verzend</button>
+  </form>
+  <footer></footer>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
