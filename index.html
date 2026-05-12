@@ -90,7 +90,57 @@ aria-label="Toggle navigation">
     Bij voldoende deelnemers wordt er gereden in drie groepen. Groep A gemiddelde snelheid 28-30 km/h. Groep B gemiddelde snelheid ca. 25-27 km/h en groep C (o.a. E-Bike) gemiddelde snelheid 22-24 km/h.
          In onderling overleg zijn er langere ritten mogelijk naar bijv. Maaseik, Thorn, Banneux, Gangelt, Monschau enz.</p>
        <p>Dit alles onder het motto:"Samen uit samen thuis."</p>
-       <br> 
+
+<!-- Routebibliotheek banner -->
+<div style="
+  background: linear-gradient(135deg, #1a1a1a 0%, #1e3a1e 60%, #2d5a2d 100%);
+  border-left: 5px solid limegreen;
+  border-radius: 10px;
+  padding: 32px 36px;
+  margin: 28px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+">
+  <div style="flex:1; min-width:220px;">
+    <div style="font-size:2rem; margin-bottom:6px;">🗺️ 🚴</div>
+    <div style="color:limegreen; font-family:'Gill Sans',sans-serif; font-size:1.1rem; font-weight:bold; margin-bottom:8px; text-transform:uppercase; letter-spacing:1px;">
+      Nieuw — Routebibliotheek
+    </div>
+    <div style="color:#e8e8e8; font-family:'Gill Sans',sans-serif; font-size:1rem; line-height:1.6;">
+      Benieuwd naar onze favoriete routes? Op zoek naar inspiratie voor de mooiste fietspaden<br>
+      in de omstreken van Mechelen? Ontdek onze routebibliotheek.
+    </div>
+  </div>
+  <div style="flex-shrink:0; text-align:center;">
+    <a href="https://twcmechelen.pythonanywhere.com/routes" target="_blank" style="
+      display: inline-block;
+      background: limegreen;
+      color: #1a1a1a;
+      font-family: 'Gill Sans', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(50,205,50,0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    "
+    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(50,205,50,0.6)';"
+    onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(50,205,50,0.4)';">
+      🚵 Bekijk de routes &rarr;
+    </a>
+    <div style="color:#888; font-size:0.75rem; margin-top:8px; font-family:'Gill Sans',sans-serif;">
+      Gratis · Geen account nodig
+    </div>
+  </div>
+</div>
+
 <footer>©TWC Mechelen 2026</footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
