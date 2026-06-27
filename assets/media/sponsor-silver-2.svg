@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <rect width="300" height="100" fill="none"/>
+  <text x="150" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#9B9B9B">AVANTI</text>
+  <text x="150" y="60" font-family="Arial, sans-serif" font-size="13"
+        text-anchor="middle" fill="#9B9B9B">werkt vooruit</text>
+</svg>

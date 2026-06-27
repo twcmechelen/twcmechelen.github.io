@@ -1,0 +1,15 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Old files (pre-brief — niet meer actief)
+/css/
+/js/
+/images/
+/models/
+/intro.html
+/stitch design/
+
+# Temp
+*.gpx
+input.gpx

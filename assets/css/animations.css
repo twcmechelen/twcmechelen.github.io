@@ -1,0 +1,35 @@
+/* ============================================================
+   TWC MECHELEN — ANIMATION HELPERS
+   Gebruikt door intro.js, scrollmap.js, main.js
+   ============================================================ */
+
+/* Reveal utility classes (set by JS after animation) */
+.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Split-text word wrapper (GSAP SplitText) */
+.split-word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Jersey brightness reveal target */
+.shirt-revealed .shirt-face img,
+.shirt-revealed .shirt-back img {
+  transform: scale(1) translateY(0);
+  filter: brightness(1);
+}
+
+/* Glow pulse on route path (added by scrollmap.js) */
+@keyframes route-glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(200, 168, 75, 0.5)); }
+  50%       { filter: drop-shadow(0 0 14px rgba(200, 168, 75, 0.9)); }
+}
+
+.route-complete .route-svg-container svg {
+  animation: route-glow-pulse 3s ease-in-out infinite;
+}
+
+/* Sponsor grayscale handled in style.css via hover */

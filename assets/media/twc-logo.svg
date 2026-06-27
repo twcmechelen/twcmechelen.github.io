@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120">
+  <rect width="300" height="120" fill="#0A0A0A"/>
+  <text x="150" y="80" font-family="Arial, sans-serif" font-size="72" font-weight="bold"
+        text-anchor="middle" fill="#C8A84B" letter-spacing="8">TWC</text>
+  <text x="150" y="108" font-family="Arial, sans-serif" font-size="14"
+        text-anchor="middle" fill="#F0EDE8" letter-spacing="4">MECHELEN</text>
+</svg>

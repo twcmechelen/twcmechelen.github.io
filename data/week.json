@@ -1,0 +1,9 @@
+{
+  "route_id": 110,
+  "naam": "Ponderosa",
+  "vibe": "Warm weekend — gratis vlaai bij Ponderosa ☀️",
+  "conditie": "warm",
+  "km": 59.3,
+  "hoogte": 313,
+  "gpx_url": "https://twcmechelen.pythonanywhere.com/routes/110/download.gpx"
+}
