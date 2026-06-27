@@ -35,14 +35,18 @@
 
 ---
 
-## FASE 2 — Hero & Intro (gepland)
-*Start na fase 1 commit + push*
+## FASE 2 — Hero & Intro ✅ (2026-06-27)
 
-Taken:
-- [ ] Intro-animatie visueel testen en finetunen in browser
-- [ ] Grain-texture verbeteren (eventueel canvas-based noise)
-- [ ] Hero-video responsiveness testen op mobiel
-- [ ] prefers-reduced-motion testen
+### Klaar
+- [x] Bug gefixed: intro-elementen verplaatst INTO #intro-overlay (z-index 1000), niet meer verborgen achter overlay
+- [x] Grain-texture op overlay: geanimeerde SVG fractalNoise (grain-shift keyframe, 0.15s steps)
+- [x] Vignette: radial-gradient op overlay::after
+- [x] Skip-knop: fade-in na 2s, kill timeline + 0.4s fade-out naar hero
+- [x] Terugkerende bezoeker: localStorage check → direct hero, geen intro
+- [x] prefers-reduced-motion: intro overgeslagen, direct hero
+- [x] 8-seconden GSAP timeline getest: logo (1.5s) → TWC (3.0s) → MECHELEN (4.5s) → tagline (5.5s) → fade-out (6.5s) → scroll-indicator (7.5s)
+- [x] revealHero() snaps hero-elementen zichtbaar na intro
+- [x] Playwright getest: alle 5 scenario's groen, 0 JS errors
 
 ---
 

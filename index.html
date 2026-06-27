@@ -20,9 +20,22 @@
 <body>
 
   <!-- ============================================================
-       INTRO OVERLAY (wordt verwijderd na animatie / bij terugkeer)
+       INTRO OVERLAY — content zit HIER (boven hero, z-index 1000)
        ============================================================ -->
-  <div id="intro-overlay" aria-hidden="true"></div>
+  <div id="intro-overlay" aria-hidden="true">
+    <div id="intro-inner">
+      <img id="intro-logo"
+           src="assets/media/twc-logo.svg"
+           alt=""
+           width="100" height="40" />
+      <div id="intro-title">
+        <span id="intro-twc">TWC</span>
+        <span id="intro-mechelen">MECHELEN</span>
+      </div>
+      <p id="intro-tagline-text">Zuid-Limburg &middot; Sinds 1977</p>
+    </div>
+    <button id="intro-skip" aria-label="Intro overslaan">Overslaan</button>
+  </div>
 
   <!-- ============================================================
        SECTIE 1: HERO
