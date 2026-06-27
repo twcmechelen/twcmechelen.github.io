@@ -6,7 +6,7 @@
   <meta name="description" content="TWC Mechelen — Wielersportclub uit Zuid-Limburg. Elke zondag 09:30. Opgericht 1977. Rijdt jij mee?" />
   <meta property="og:title" content="TWC Mechelen" />
   <meta property="og:description" content="Elke zondag. 09:30. A, B en C-groep. 65–70 km door het Limburgse heuvelland. Sinds 1977." />
-  <meta property="og:image" content="assets/media/hero-poster.jpg" />
+  <meta property="og:image" content="assets/media/hero-poster.webp" />
   <meta property="og:type" content="website" />
   <title>TWC Mechelen</title>
 
@@ -47,7 +47,8 @@
       muted
       loop
       playsinline
-      poster="assets/media/hero-poster.jpg"
+      preload="none"
+      poster="assets/media/hero-poster.webp"
       aria-hidden="true"
     >
       <source src="assets/media/hero-video.webm" type="video/webm" />
@@ -160,18 +161,24 @@
       <div class="shirt-visual">
         <div class="shirt-card" role="button" aria-label="Klik om shirt om te draaien" tabindex="0">
           <div class="shirt-face">
-            <img
-              src="assets/media/jersey-front.png"
-              alt="TWC Mechelen shirt voorkant"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="assets/media/jersey-front.webp" type="image/webp" />
+              <img
+                src="assets/media/jersey-front.png"
+                alt="TWC Mechelen shirt voorkant"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div class="shirt-back">
-            <img
-              src="assets/media/jersey-back.png"
-              alt="TWC Mechelen shirt achterkant"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="assets/media/jersey-back.webp" type="image/webp" />
+              <img
+                src="assets/media/jersey-back.png"
+                alt="TWC Mechelen shirt achterkant"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
         <p class="shirt-flip-hint">Klik om te draaien</p>

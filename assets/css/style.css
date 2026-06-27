@@ -356,7 +356,7 @@ body::before {
 .over-ons-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../media/groepsfoto-1.jpg');
+  background-image: url('../media/groepsfoto-1.webp');
   background-size: cover;
   background-position: center;
   transform-origin: center;
@@ -771,7 +771,7 @@ body::before {
 .contact-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../media/groepsfoto-2.jpg');
+  background-image: url('../media/groepsfoto-2.webp');
   background-size: cover;
   background-position: center;
   will-change: transform;
