@@ -135,6 +135,12 @@ function initScrollAnimations() {
     }
   });
 
+  /* Shirt section-label */
+  gsap.to('#het-shirt .section-label', {
+    opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+    scrollTrigger: { trigger: '#het-shirt', start: 'top 70%' }
+  });
+
   /* Shirt tekst slide-in van links */
   gsap.to('.shirt-right', {
     opacity: 1,
@@ -156,6 +162,15 @@ function initScrollAnimations() {
      SECTIE 5: SPONSORS
      ============================================================ */
 
+  /* "Onze partners" label */
+  gsap.to('#sponsors .section-label', {
+    opacity: 1,
+    y: 0,
+    duration: 0.7,
+    ease: 'power2.out',
+    scrollTrigger: { trigger: '#sponsors', start: 'top 75%' }
+  });
+
   /* Sponsors fade-in bij scroll */
   gsap.fromTo('.sponsor-item', {
     opacity: 0,
@@ -166,6 +181,7 @@ function initScrollAnimations() {
     stagger: 0.12,
     duration: 0.7,
     ease: 'power2.out',
+    delay: 0.2,
     scrollTrigger: { trigger: '#sponsors', start: 'top 75%' }
   });
 

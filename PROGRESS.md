@@ -50,6 +50,24 @@
 
 ---
 
+## FASE 3 — Scroll-animaties ✅ (2026-06-27)
+
+### Klaar
+- [x] Sectie 2: parallax achtergrond (yPercent -20 scrub) ✅
+- [x] Sectie 2: tekst-regels reveal per stagger ✅
+- [x] Sectie 2: "1977" counter animatie bij viewport-enter ✅
+- [x] Sectie 2: jubileum-badge pulse + fade-in ✅
+- [x] Sectie 4: jersey scale+brightness reveal via ScrollTrigger ✅
+- [x] Sectie 4: hover 3D rotatie (CSS perspective) ✅
+- [x] Sectie 4: klik-om-te-draaien voor/achterkant toggle ✅
+- [x] Sectie 4: "HET SHIRT" section-label ScrollTrigger toegevoegd ✅
+- [x] Sectie 5: sponsor logos zichtbaar (SVG tekst→wit/goud, brightness 1.1) ✅
+- [x] Sectie 5: grayscale→kleur bij hover + tooltip ✅
+- [x] Sectie 5: "Onze partners" label ScrollTrigger toegevoegd ✅
+- [x] Sectie 5: min-height 80vh, meer padding ✅
+- [x] Sectie 6: parallax groepsfoto + fade-in tekst/CTA/socials ✅
+- [x] Playwright: alle 6 secties getest, 0 JS errors
+
 ## FASE 3 — Scroll-animaties (gepland)
 
 ---

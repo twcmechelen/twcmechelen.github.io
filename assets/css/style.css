@@ -681,9 +681,12 @@ body::before {
    ============================================================ */
 #sponsors {
   position: relative;
-  padding: var(--section-pad) 1.5rem;
+  padding: var(--section-pad) 1.5rem calc(var(--section-pad) * 1.8);
   background: var(--color-black);
   overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .sponsors-inner {
@@ -714,21 +717,21 @@ body::before {
 }
 
 .sponsor-item img {
-  filter: grayscale(1) brightness(0.85);
-  transition: filter 0.4s ease;
+  filter: grayscale(1) brightness(1.1);
+  transition: filter 0.5s ease;
 }
 
 .sponsor-item:hover img {
-  filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1.2);
 }
 
 .sponsor-gold-item img {
-  height: 80px;
+  height: 100px;
   width: auto;
 }
 
 .sponsor-silver-item img {
-  height: 55px;
+  height: 70px;
   width: auto;
 }
 

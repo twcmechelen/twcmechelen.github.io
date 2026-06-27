@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
   <rect width="400" height="120" fill="none"/>
-  <text x="200" y="55" font-family="Arial, sans-serif" font-size="22" font-weight="bold"
-        text-anchor="middle" fill="#C8A84B">JEF ABELS BIKES</text>
-  <text x="200" y="80" font-family="Arial, sans-serif" font-size="13"
-        text-anchor="middle" fill="#4A4A4A">Fietsenspeciaalzaak · Mechelen</text>
+  <text x="200" y="52" font-family="Arial, sans-serif" font-size="26" font-weight="bold"
+        text-anchor="middle" fill="#C8A84B" letter-spacing="2">JEF ABELS BIKES</text>
+  <text x="200" y="78" font-family="Arial, sans-serif" font-size="13"
+        text-anchor="middle" fill="rgba(240,237,232,0.5)" letter-spacing="3">MECHELEN</text>
 </svg>
