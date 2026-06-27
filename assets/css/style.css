@@ -141,7 +141,7 @@ body::before {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(5rem, 18vw, 16rem);
+  font-size: clamp(3.5rem, 18vw, 16rem);
   line-height: 0.85;
   color: var(--color-white);
   letter-spacing: 0.02em;
@@ -900,7 +900,7 @@ footer {
   }
 
   #hero {
-    background-image: url('../media/hero-poster.jpg');
+    background-image: url('../media/hero-poster.webp');
     background-size: cover;
     background-position: center;
   }

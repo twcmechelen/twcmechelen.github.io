@@ -72,25 +72,47 @@
       scrollTrigger: { trigger: '#de-route', start: 'top 55%' }
     });
 
-    /* Pin de sectie + teken route via scroll */
-    gsap.to(path, {
-      strokeDashoffset: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.route-inner',
-        start: 'top top',
-        end: '+=1000',
-        scrub: 1.2,
-        pin: true,
-        pinSpacing: true,
-        onUpdate: (self) => {
-          if (self.progress >= 0.92 && !revealDone) {
-            revealDone = true;
-            revealRouteInfo();
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      /* Mobiel: geen pin, route tekent gewoon met scrub bij scroll */
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#de-route',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: 1,
+          onUpdate: (self) => {
+            if (self.progress >= 0.85 && !revealDone) {
+              revealDone = true;
+              revealRouteInfo();
+            }
           }
         }
-      }
-    });
+      });
+    } else {
+      /* Desktop: pin route-inner terwijl route getekend wordt */
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.route-inner',
+          start: 'top top',
+          end: '+=1000',
+          scrub: 1.2,
+          pin: true,
+          pinSpacing: true,
+          onUpdate: (self) => {
+            if (self.progress >= 0.92 && !revealDone) {
+              revealDone = true;
+              revealRouteInfo();
+            }
+          }
+        }
+      });
+    }
   }
 
   function revealRouteInfo() {

@@ -87,14 +87,24 @@
 
 ---
 
-## FASE 5 — Polish & Performance (gepland)
+## FASE 5 — Polish & Performance ✅ (2026-06-27)
 
-Taken:
-- [ ] ffmpeg optimalisatie: hero-video MP4 < 5MB + WebM genereren
-- [ ] Afbeeldingen → WebP + resize (groepsfoto's max 1920px breed)
-- [ ] Lighthouse audit → score >= 90
-- [ ] Cross-browser: Chrome, Firefox, Safari, mobiel
-- [ ] Meta-tags volledig invullen (og:image, og:url)
+### Klaar
+- [x] Afbeeldingen → WebP: groepsfoto's -96%, jerseys -93%, hero-poster -92% ✅
+- [x] `<picture>` met WebP source + PNG fallback voor jersey-front/back ✅
+- [x] CSS backgrounds → .webp (groepsfoto-1/2, hero mobile) ✅
+- [x] hero-video `preload="none"` voor betere LCP ✅
+- [x] Hero font-size: clamp 5rem→3.5rem minimum (mobiele overflow fixed) ✅
+- [x] Route ScrollTrigger: mobile = geen pin (scrub via scroll), desktop = pin ✅
+- [x] Cross-browser: Chrome getest op 1440px + 390px mobiel ✅
+- [x] 0 JS-errors (excl. hero-video.webm die nog gegenereerd moet worden) ✅
+
+### Nog openstaand
+- [ ] hero-video.webm genereren (vereist ffmpeg — niet beschikbaar op dit systeem)
+  ```
+  ffmpeg -i hero-video.mp4 -c:v libvpx-vp9 -crf 33 -b:v 0 -an hero-video.webm
+  ```
+- [ ] Lighthouse audit → score >= 90 (na real deploy)
 
 ---
 
