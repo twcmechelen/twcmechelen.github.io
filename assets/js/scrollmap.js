@@ -1,11 +1,9 @@
 /* ============================================================
    TWC MECHELEN — ROUTE SCROLLMAP
-   SVG path tekent zichzelf via stroke-dashoffset + ScrollTrigger
-   Laadt data/week.json voor naam + vibe-tekst
+   SVG path tekent zichzelf via stroke-dashoffset + ScrollTrigger pin
    ============================================================ */
 
 (function () {
-  /* Laad week.json voor route-informatie */
   fetch('data/week.json')
     .then(r => r.json())
     .then(initRoute)
@@ -19,18 +17,16 @@
     });
 
   function initRoute(data) {
-    /* Vul tekst in */
-    const nameEl  = document.querySelector('.route-naam');
-    const vibeEl  = document.querySelector('.route-vibe');
-    const kmEl    = document.querySelector('.stat-km');
-    const hoogteEl= document.querySelector('.stat-hoogte');
+    const nameEl   = document.querySelector('.route-naam');
+    const vibeEl   = document.querySelector('.route-vibe');
+    const kmEl     = document.querySelector('.stat-km');
+    const hoogteEl = document.querySelector('.stat-hoogte');
 
     if (nameEl)   nameEl.textContent   = data.naam;
     if (vibeEl)   vibeEl.textContent   = data.vibe;
     if (kmEl)     kmEl.textContent     = `${data.km} km`;
     if (hoogteEl) hoogteEl.textContent = `${data.hoogte} m`;
 
-    /* Laad en animeer route SVG */
     loadRouteSVG();
   }
 
@@ -42,62 +38,67 @@
       .then(r => r.text())
       .then(svgText => {
         container.innerHTML = svgText;
-        setupScrollAnimation(container);
+        setupScrollAnimation();
       })
       .catch(() => {
-        container.innerHTML = '<p style="color:var(--color-muted);font-size:0.8rem;padding:1rem">Route SVG niet beschikbaar.<br>Genereer via: python3 tools/gpx_to_svg.py input.gpx</p>';
+        container.innerHTML = '<p style="color:var(--color-muted);font-size:0.8rem;padding:1rem">Route SVG niet beschikbaar.</p>';
       });
   }
 
-  function setupScrollAnimation(container) {
-    const path = container.querySelector('#route-path, path');
-    if (!path || typeof gsap === 'undefined') return;
+  function setupScrollAnimation() {
+    const container = document.querySelector('.route-svg-container');
+    const path = container?.querySelector('#route-path, path');
+    if (!path || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
     const length = path.getTotalLength();
+    let revealDone = false;
 
-    /* Reset dash */
     gsap.set(path, {
       strokeDasharray: length,
       strokeDashoffset: length
     });
 
-    /* Teken lijn mee met scroll */
+    /* Section-label en tekst meteen zichtbaar als sectie in beeld */
+    gsap.to('#de-route .section-label', {
+      opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+      scrollTrigger: { trigger: '#de-route', start: 'top 65%' }
+    });
+    gsap.to('.route-naam', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+      scrollTrigger: { trigger: '#de-route', start: 'top 55%' }
+    });
+    gsap.to('.route-vibe', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.15,
+      scrollTrigger: { trigger: '#de-route', start: 'top 55%' }
+    });
+
+    /* Pin de sectie + teken route via scroll */
     gsap.to(path, {
       strokeDashoffset: 0,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#de-route',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 1,
-        onComplete: () => {
-          document.querySelector('#de-route')?.classList.add('route-complete');
-          revealRouteInfo();
+        trigger: '.route-inner',
+        start: 'top top',
+        end: '+=1000',
+        scrub: 1.2,
+        pin: true,
+        pinSpacing: true,
+        onUpdate: (self) => {
+          if (self.progress >= 0.92 && !revealDone) {
+            revealDone = true;
+            revealRouteInfo();
+          }
         }
       }
-    });
-
-    /* Tekst-elementen onthullen met scrollen */
-    const section = document.getElementById('de-route');
-    if (!section) return;
-
-    gsap.to('.route-naam', {
-      opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-      scrollTrigger: { trigger: '#de-route', start: 'top 70%' }
-    });
-
-    gsap.to('.route-vibe', {
-      opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.15,
-      scrollTrigger: { trigger: '#de-route', start: 'top 70%' }
     });
   }
 
   function revealRouteInfo() {
     gsap.to('.route-stats', {
-      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out'
+      opacity: 1, y: 0, duration: 0.9, ease: 'power2.out'
     });
     gsap.to('.route-update-info', {
-      opacity: 1, duration: 0.6, ease: 'power2.out', delay: 0.3
+      opacity: 1, duration: 0.6, ease: 'power2.out', delay: 0.35
     });
   }
 })();

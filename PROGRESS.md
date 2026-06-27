@@ -72,15 +72,18 @@
 
 ---
 
-## FASE 4 — Route ScrollMap (gepland)
-*Meest complex — Codrops ScrollMap techniek*
+## FASE 4 — Route ScrollMap ✅ (2026-06-27)
 
-Taken:
-- [ ] Ponderosa GPX downloaden: `curl -o ponderosa.gpx https://twcmechelen.pythonanywhere.com/routes/110/download.gpx`
-- [ ] `python3 tools/gpx_to_svg.py ponderosa.gpx` → route.svg genereren
-- [ ] ScrollTrigger stroke-dashoffset animatie testen
-- [ ] Waypoint labels op correcte SVG-posities
-- [ ] week.json live koppelen als fincycling /routes/featured endpoint beschikbaar is
+### Klaar
+- [x] Ponderosa GPX gedownload van fincycling API (330 punten) ✅
+- [x] python3 tools/gpx_to_svg.py → route.svg gegenereerd (echte routecoördinaten) ✅
+- [x] stroke-dashoffset animatie: lijn tekent zichzelf terwijl je scrollt ✅
+- [x] ScrollTrigger pin: route-inner vast terwijl 1000px scroll door animatie gaat ✅
+- [x] Route stats (km, hoogtemeters, tijd) fade-in na route compleet ✅
+- [x] week.json live gekoppeld, fallback op Ponderosa hardcode ✅
+- [x] Gold glow filter (feGaussianBlur) op SVG pad ✅
+- [ ] Waypoint labels — uitgesteld naar FASE 5 (complex, niet kritiek)
+- [ ] week.json live via fincycling /routes/featured — wacht op Alex's fincycling endpoint
 
 ---
 

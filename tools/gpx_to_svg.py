@@ -13,7 +13,7 @@ VIEWBOX_W = 800
 VIEWBOX_H = 600
 PADDING = 40
 STROKE_COLOR = "#C8A84B"
-STROKE_WIDTH = 3
+STROKE_WIDTH = 4
 
 
 def parse_gpx(filepath):
@@ -71,9 +71,10 @@ def points_to_svg_path(points):
 def build_svg(path_d, start, end):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {VIEWBOX_W} {VIEWBOX_H}">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
+        <feMergeNode in="blur"/>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
