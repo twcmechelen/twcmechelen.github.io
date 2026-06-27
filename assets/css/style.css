@@ -608,7 +608,7 @@ body::before {
 }
 
 .sponsor-item img {
-  filter: grayscale(1) brightness(0.6);
+  filter: grayscale(1) brightness(0.85);
   transition: filter 0.4s ease;
 }
 

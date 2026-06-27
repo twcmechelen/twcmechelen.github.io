@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Placeholder Ponderosa route — vervang met: python3 tools/gpx_to_svg.py ponderosa.gpx -->
+  <path
+    id="route-path"
+    d="M 60,520 C 80,480 120,460 160,440 C 200,420 240,400 280,370 C 320,340 340,300 360,270 C 380,240 400,220 440,200 C 480,180 510,160 540,140 C 570,120 590,100 610,90 C 640,80 670,85 700,95 C 720,105 730,120 735,140 C 740,160 735,180 720,200 C 700,225 680,240 660,255 C 630,275 600,290 570,310 C 540,330 510,350 490,375 C 470,400 460,430 455,460 C 450,490 455,515 465,535 C 475,555 490,565 510,570 C 535,575 560,568 580,555 C 605,540 625,520 645,500 C 670,475 695,455 720,440 C 740,428 755,420 740,410"
+    fill="none"
+    stroke="#C8A84B"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+  <circle cx="60" cy="520" r="6" fill="#C8A84B" opacity="0.9"/>
+  <circle cx="740" cy="410" r="6" fill="#C8A84B" opacity="0.9"/>
+</svg>
